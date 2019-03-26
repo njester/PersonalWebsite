@@ -1,0 +1,174 @@
+.bio {
+  --padding-timeline: 2rem;
+  --transition-duration-details: 1s;
+  --color-timeline: #f1f1f1;
+  --color-date: rgba(47,47,47,0.5);
+  --color-company: rgba(47,47,47,0.5);
+  --color-point: blue;
+  --color-point-border: white;
+  --color-base: #1f1f1f;
+
+  &__ {
+    &list {
+      padding: 4rem 0;
+      position: relative;
+      margin: 4rem auto 0;
+      max-width: 550px;
+
+      &:before {
+        // content: "";
+        // background-color: var(--color-timeline);
+        // position: absolute;
+        // top: 0;
+        // height: 100%;
+        // transform: translateX(-50%);
+        // width: 4px;
+
+        // @media (max-width: 599px) {
+        //   left: 20px;
+        // }
+        
+        // @media (min-width: 600px) {
+        //   left: 50%;
+        // }
+      }
+    }
+
+    &line {
+      background-color: var(--color-timeline);
+      position: absolute;
+      top: 0;
+      height: 100%;
+      transform: translateX(-50%);
+      width: 4px;
+
+      @media (max-width: 599px) {
+        left: 20px;
+      }
+      
+      @media (min-width: 600px) {
+        left: 50%;
+      }
+    }
+
+    &item {
+      margin-bottom: 4rem;
+      display: flex;
+      justify-content: space-between;
+      position: relative;
+      min-height: 3rem;
+
+      @media (max-width: 599px) {
+        flex-direction: column;
+        padding-left: 45px;
+      }
+      
+      &.jsDetailToggle {
+        cursor: pointer;
+      }
+    }
+
+    &date,
+    &info {
+      box-sizing: border-box;
+      
+      @media (min-width: 600px) {
+        width: 50%;
+      }
+    }
+
+    &date {
+      color: var(--color-date);
+      line-height: 1.4;
+      font-size: 0.9rem;
+      
+      @media (min-width: 600px) {
+        .bio__item:nth-of-type(odd) & {
+          text-align: right;
+          order: 1;
+          padding-right: var(--padding-timeline);
+        }
+  
+        .bio__item:nth-of-type(even) & {
+          text-align: left;
+          order: 2;
+          padding-left: var(--padding-timeline);
+        }
+      }
+    }
+
+    &point {
+      position: absolute;
+      top: 0;
+      width: 30px;
+      transform: translateX(-50%);
+      height: 30px;
+      box-sizing: border-box;
+      background-color: var(--color-point);
+      border-radius: 50%;
+      border: 8px solid var(--color-point-border);
+
+      @media (max-width: 599px) {
+        left: 20px;
+      }
+
+      @media (min-width: 600px) {
+        left: 50%;
+      }
+
+      &:after {
+        position: absolute;
+        top: 0;
+        content: "";
+        left: 0;
+        box-sizing: border-box;
+        width: 100%;
+        height: 100%;
+        background-color: var(--color-point);
+        border-radius: 50%;
+        animation: biopulse 2s infinite;
+      }
+    }
+
+    &info {
+      @media (min-width: 600px) {
+        .bio__item:nth-of-type(odd) & {
+          text-align: left;
+          order: 2;
+          padding-left: var(--padding-timeline);
+        }
+  
+        .bio__item:nth-of-type(even) & {
+          text-align: right;
+          order: 1;
+          padding-right: var(--padding-timeline);
+        }
+      }
+    }
+
+    &title {
+      font-weight: bold;
+      line-height: 1.4;
+    }
+
+    &company {
+      margin-top: 0.3rem;
+      font-size: 0.8em;
+      color: var(--color-company);
+    }
+
+    &details {
+      color: var(--color-base);
+      margin-top: 0.8rem;
+      font-size: 0.9em;
+      max-height: 0;
+      overflow: hidden;
+      transition: max-height 0.5s;
+      
+      .bio__item.details-active & {
+        transition: max-height var(--transition-duration-details) ease-in;
+        max-height: 1000px;
+      }
+    }
+  }
+}

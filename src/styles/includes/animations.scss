@@ -1,0 +1,12 @@
+@keyframes biopulse {
+  0% {
+    transform: scale(0, 0);
+    filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=80);
+    opacity: .8
+   }
+   100% {
+    transform: scale(2.5, 2.5);
+    filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=0);
+    opacity: 0
+   }
+}
