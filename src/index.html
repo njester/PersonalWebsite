@@ -4,114 +4,247 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <title>Manuel Koch | Informatik Student | Anwendungsentwickler</title>
+  <meta name="robots" content="index,follow">
+  <meta name="description" content="Anwendungsentwickler | Informatik Student | Schweinfurt | kontakt@koch-manuel.de">
+  <meta name="keywords" content="">
 </head>
 
 <body>
-  <nav>
-
-  </nav>
-  <section class="header">
-
-  </section>
-
-  <section class="bio">
-    <div class="bio__list">
-      <span class="bio__line"></span>
-      <div class="bio__item jsDetailToggle">
-        <div class="bio__date">
-          09.2012 - 07.2015
-        </div>
-        <div class="bio__point"></div>
-        <div class="bio__info">
-          <div class="bio__title">
-            Ausbildung: Fachinformatiker Anwendungsentwicklung
-          </div>
-          <div class="bio__company">
-            DV-Schule
-          </div>
-          <div class="bio__details">
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Cupiditate saepe sint exercitationem corrupti
-            consequuntur rem nesciunt iusto earum! Sequi, magni?
-          </div>
-        </div>
-      </div>
-      <div class="bio__item jsDetailToggle">
-        <div class="bio__date">
-          10.2014 - 07.2015
-        </div>
-        <div class="bio__point"></div>
-        <div class="bio__info">
-          <div class="bio__title">
-            Praktikum
-          </div>
-          <div class="bio__company">
-            Kummert
-          </div>
-        </div>
-      </div>
-      <div class="bio__item jsDetailToggle">
-        <div class="bio__date">
-          08.2015 - 03.2017
-        </div>
-        <div class="bio__point"></div>
-        <div class="bio__info">
-          <div class="bio__title">
-            ABAP Entwickler
-          </div>
-          <div class="bio__company">
-            SALT Solutions AG
-          </div>
-        </div>
-      </div>
-      <div class="bio__item jsDetailToggle">
-        <div class="bio__date">
-          04.2017 - 09.2018
-        </div>
-        <div class="bio__point"></div>
-        <div class="bio__info">
-          <div class="bio__title">
-            Web Frontend Entwickler
-          </div>
-          <div class="bio__company">
-            s.Oliver GmbH & Co. KG
-          </div>
-        </div>
-      </div>
-      <div class="bio__item jsDetailToggle">
-        <div class="bio__date">
-          10.2018 - lfd.
-        </div>
-        <div class="bio__point"></div>
-        <div class="bio__info">
-          <div class="bio__title">
-            Studium Informatik
-          </div>
-          <div class="bio__company">
-            FHWS
-          </div>
-        </div>
-      </div>
-      <div class="bio__item">
-        <div class="bio__date">
-          10.2018 - lfd.
-        </div>
-        <div class="bio__point"></div>
-        <div class="bio__info">
-          <div class="bio__title">
-            Werkstudent
-          </div>
-          <div class="bio__company">
-            s.Oliver GbmH & Co. Kg
-          </div>
-        </div>
-      </div>
+  <nav class="nav jsNav">
+    <div class="nav__thumb">
+      <img src="src/images/thumb3.jpg" alt="Manuel">
     </div>
-  </section>
-  <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/1.16.0/TweenMax.min.js"></script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.3/ScrollMagic.js"></script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.3/plugins/animation.gsap.min.js"></script> -->
+    <ul class="nav__items">
+      <li class="nav__item"><a data-link=".jsHeader" class="nav__link">Start</a></li>
+      <li class="nav__item"><a data-link=".jsBio" class="nav__link">CV</a></li>
+      <li class="nav__item"><a data-link=".jsSkills" class="nav__link">Skills</a></li>
+      <li class="nav__item"><a data-link=".jsHobbies" class="nav__link">Hobbies</a></li>
+      <li class="nav__item"><a data-link=".jsMap" class="nav__link">Impressum</a></li>
+    </ul>
+  </nav>
+  
+  <a href="javascript:;" class="nav__toggle jsNavToggle">
+    <span class="nav__togglestroke"></span>
+  </a>
+  <div class="content">
+    <section class="header jsHeader">
 
+    </section>
+
+    <section class="bio jsBio" id="bio">
+      <h3 class="bio__heading">Erfahrungen & Ausbildung</h3>
+      <div class="bio__list">
+        <span class="bio__line"></span>
+        <div class="bio__item">
+          <p class="bio__date">
+            09.2012 - 07.2015
+          </p>
+          <div class="bio__point"></div>
+          <div class="bio__info">
+            <h5 class="bio__title">
+              Ausbildung: Fachinformatiker Anwendungsentwicklung
+            </h5>
+            <span class="bio__company">
+              DV-Schule
+            </span>
+          </div>
+        </div>
+        <div class="bio__item">
+          <p class="bio__date">
+            10.2014 - 07.2015
+          </p>
+          <div class="bio__point"></div>
+          <div class="bio__info">
+            <h5 class="bio__title">
+              Praktikum
+            </h5>
+            <span class="bio__company">
+              Kummert
+            </span>
+          </div>
+        </div>
+        <div class="bio__item">
+          <p class="bio__date">
+            08.2015 - 03.2017
+          </p>
+          <div class="bio__point"></div>
+          <div class="bio__info">
+            <h5 class="bio__title">
+              ABAP Entwickler
+            </h5>
+            <span class="bio__company">
+              SALT Solutions AG
+            </span>
+          </div>
+        </div>
+        <div class="bio__item">
+          <p class="bio__date">
+            04.2017 - 09.2018
+          </p>
+          <div class="bio__point"></div>
+          <div class="bio__info">
+            <h5 class="bio__title">
+              Web Frontend Entwickler
+            </h5>
+            <span class="bio__company">
+              s.Oliver GmbH & Co. KG
+            </span>
+          </div>
+        </div>
+        <div class="bio__item bio__item--active">
+          <p class="bio__date">
+            10.2018 - lfd.
+          </p>
+          <div class="bio__point"></div>
+          <div class="bio__info">
+            <h5 class="bio__title">
+              Studium Informatik
+            </h5>
+            <span class="bio__company">
+              FHWS
+            </span>
+          </div>
+        </div>
+        <div class="bio__item bio__item--active">
+          <p class="bio__date">
+            10.2018 - lfd.
+          </p>
+          <div class="bio__point"></div>
+          <div class="bio__info">
+            <h5 class="bio__title">
+              Werkstudent
+            </h5>
+            <span class="bio__company">
+              s.Oliver GbmH & Co. Kg
+            </span>
+          </div>
+        </div>
+        <div class="bio__item bio__item--active">
+          <p class="bio__date">
+            05.2019 - lfd.
+          </p>
+          <div class="bio__point"></div>
+          <div class="bio__info">
+            <h5 class="bio__title">
+              Tutor
+            </h5>
+            <span class="bio__company">
+              FHWS
+            </span>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section class="skills jsSkills" id="skills">
+      <div class="skills__content">
+        <h3 class="skills__heading">
+          Skills
+        </h3>
+        <div class="skills__items">
+          <div class="skills__item">
+            <div class="skills__progress skills__progress--nativ">
+              <span class="skills__level">
+                Muttersprache
+              </span>
+            </div>
+            <h5 class="skills__label">Deutsch</h5>
+          </div>
+          <div class="skills__item">
+            <div class="skills__progress skills__progress--negotiation">
+              <span class="skills__level">
+                Verhandlungssicher
+              </span>
+            </div>
+            <h5 class="skills__label">HTML / CSS / JS</h5>
+          </div>
+          <div class="skills__item">
+            <div class="skills__progress skills__progress--mid">
+              <span class="skills__level">
+                Fließend
+              </span>
+            </div>
+            <h5 class="skills__label">Englisch</h5>
+          </div>
+          <div class="skills__item">
+            <div class="skills__progress skills__progress--mid">
+              <span class="skills__level">
+                Fließend
+              </span>
+            </div>
+            <h5 class="skills__label">Java / C#</h5>
+          </div>
+          <div class="skills__item">
+            <div class="skills__progress skills__progress--foundations">
+              <span class="skills__level">
+                Grundkentnisse
+              </span>
+            </div>
+            <h5 class="skills__label">C / Scheme</h5>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section class="hobbies jsHobbies" id="hobbies">
+      <div class="hobbies__content">
+        <h3 class="hobbies__heading">Hobbies</h3>
+
+      </div>
+    </section>
+    <section class="map jsMap" id="map">
+      <img class="map__bg" src="staticmap.php?center=40.714728,-73.998672&zoom=14&size=865x512&maptype=mapnik"></img>
+      <div class="map__fg">
+        <h3 class="map__head">Impressum</h3>
+        <div class="map__heading">
+          <img src="src/images/thumb3.jpg" alt="" class="map__thumb">
+          <span class="map__cursortext">Kontaktieren Sie mich!</span>
+          <span class="map__cursorindicator">|</span>
+        </div>
+        <div class="map__sections">
+          <div class="map__section">
+            <h4 class="map__headline">Adresse:</h4>
+            <adress class="map__copy">
+              Harald-Hamberg-Str. 6<br />
+              97422 Schweinfurt
+            </adress>
+          </div>
+          <div class="map__spacer"></div>
+          <div class="map__section">
+            <h4 class="map__headline">E-Mail:</h4>
+            <a href="mailto:manuel.koch90@gmail.com" class="map__copy map__copy--hover">manuel.koch90@gmail.com</a>
+          </div>
+          <div class="map__spacer"></div>
+          <div class="map__section">
+            <h4 class="map__headline">Telefon:</h4>
+            <a href="javascript:;" class="map__copy map__copy--hover">+49 151 20614454</a>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section class="imprint">
+      <div class="imprint__editor">
+        <h3 class="imprint__headline">Impressum.json</h3>
+        <pre class="imprint__code">
+          {
+            "<span class="imprint__attr">Name</span>": "<span class="imprint__value">Manuel Koch</span>",
+            "<span class="imprint__attr">Anschrift</span>": {
+              "<span class="imprint__attr">Straße</span>": "<span class="imprint__value">Harald-Hamberg-Str. 6</span>",
+              "<span class="imprint__attr">PLZ</span>": "<span class="imprint__value">97422</span>",
+              "<span class="imprint__attr">Ort</span>": "<span class="imprint__value">Schweinfurt</span>"
+            },
+            "<span class="imprint__attr">Telefon</span>": "<span class="imprint__value">+49 151 20614454</span>",
+            "<span class="imprint__attr">E-Mail</span>": "<a href="mailto:kontakt@koch-manuel.de" class="imprint__value">kontakt@koch-manuel.de</a>"
+          }<span class="imprint__cursor">|</span>
+        </pre>
+      </div>
+    </section>
+  </div>
+  <footer class="footer">
+    <p class="footer__love">
+        Made with love and vanilla JS
+    </p>
+  </footer>
 </body>
 
 </html>

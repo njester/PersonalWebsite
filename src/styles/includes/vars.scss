@@ -1,4 +1,14 @@
 html {
   --bp-small-max: 599px;
   --bp-large-min: 600px;
+  --bp-nav-offcanvas-max: 1199px;
+  --bp-nav-oncanvas-min: 1200px;
+
+  --navigation-width: 320px;
+  --zindex-nav: 100;
+  --zindex-content: 2;
+
+  --height-footer: 60px;
+
+  --font-family-code: Consolas, 'Courier New', monospace;
 }

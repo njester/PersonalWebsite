@@ -6,6 +6,7 @@ build
 
 # misc
 .DS_Store
+TODO.md
 
 npm-debug.log
 yarn-error.log

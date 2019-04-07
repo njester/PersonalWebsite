@@ -1,53 +1,35 @@
-import { TweenMax, TimelineMax } from 'gsap';
-
 window.addEventListener("load", function() {
   createObserver();
-  document
-    .querySelectorAll('.jsDetailToggle')
-    .forEach(item => {
-      item.addEventListener('click', bioItemClicked);
-    });
-
+  hideElements();
   }, false);
 
-function bioItemClicked() {
-  //offsetHeight 
-  this.classList.toggle('details-active');
-  //console.log(this.querySelector('.bio__details'));
+function hideElements() {
+  let index = 0;
+  document
+    .querySelectorAll('.bio__info, .bio__point, .bio__date')
+    .forEach((item, idx) => {
+      item.style.opacity = 0;
+      item.transform = 'translateY(15px)';
+      index += (idx % 3 == 0 ? 1 : 0);
+      item.style.animationDelay = index * 300 + 'ms';
+    });
+
+    document
+    .querySelector('.bio__line')
+    .style.transition = `height ${++index * 450}ms`;
 }
 
 function createObserver() {
   let observer;
-  const target = document.querySelector('.bio');
+  const target = document.querySelector('.bio__list');
 
   observer = new IntersectionObserver(entries => {
     entries.forEach(entry => {
-      if (entry.intersectionRatio > 0) {
-        const lineAnimationTime = document.querySelectorAll('.bio__item').length * 0.4;
-        TweenMax.fromTo('.bio__line', lineAnimationTime, {height:'0'}, {height: '100%'});
-        TweenMax.staggerFromTo('.bio__info', 1, {y: '+=15', opacity:0}, {y: '0', opacity:1}, 0.2);
-        TweenMax.staggerFromTo('.bio__point', 1, {opacity:0}, {opacity:1}, 0.2);
-        TweenMax.staggerFromTo('.bio__date', 1, {y: '+=15', opacity:0}, {y: '0', opacity:1}, 0.2);
-        observer.unobserve(entry.target);
+      if (entry.isIntersecting) {
+        setTimeout(() => document.querySelector('.jsBio').classList.add('bio-visible'), 25);
       }
     });
   });
 
   observer.observe(target);
 }
-
-// var ctrl = new ScrollMagic.Controller({
-//   globalSceneOptions: {
-//       triggerHook: 'onLeave'
-//   }
-// });
-
-// let tween = 
-
-// new ScrollMagic.Scene({
-//     duration: '90%'
-// })
-// .setTween(tween)
-// .triggerElement('.header')
-// .addTo(ctrl);
-// TweenMax.staggerFrom('.bio__date', 1, {x:"+=350"}, 0.2);%

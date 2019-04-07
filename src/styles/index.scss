@@ -4,5 +4,41 @@
 @import 'includes/mixins';
 @import 'includes/animations';
 
+@import 'includes/content';
+@import 'includes/nav';
 @import 'includes/header';
 @import 'includes/bio';
+@import 'includes/skills';
+@import 'includes/hobbies';
+@import 'includes/map';
+@import 'includes/imprint';
+@import 'includes/footer';
+
+body {
+  font-family: 'Poppins', sans-serif;
+}
+
+section {
+  overflow: hidden;
+  margin-bottom: 0.2rem;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+
+
+  &:hover {
+    text-decoration: none;
+    color: inherit;
+  }
+}
+
+h1,
+h2,
+h3,
+h4,
+h5 {
+  margin: 0;
+  font-weight: 600;
+}

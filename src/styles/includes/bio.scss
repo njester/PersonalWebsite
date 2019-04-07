@@ -1,36 +1,41 @@
 .bio {
   --padding-timeline: 2rem;
-  --transition-duration-details: 1s;
+  --animation-duration-fadein: 1s;
+  --animation-duration-pulse: 2s;
   --color-timeline: #f1f1f1;
   --color-date: rgba(47,47,47,0.5);
   --color-company: rgba(47,47,47,0.5);
-  --color-point: blue;
+  --color-point: rgba(201, 204, 203);
+  --color-point-active: #49B79C;
   --color-point-border: white;
   --color-base: #1f1f1f;
+  
+  padding-top: 4em;
+
+  // background: rgba(white, 0.5);
 
   &__ {
+    &heading,
     &list {
-      padding: 4rem 0;
+      transition: transform 0.4s;
+      
+      @media (min-width: 1200px) {
+        transform: translate3d(calc(var(--navigation-width) / 2), 0, 0);
+      }
+    }
+
+    &heading {
+      text-align: center;
+    }
+
+    &list {
+      padding: 4rem 0 0;
       position: relative;
-      margin: 4rem auto 0;
+      margin: 2rem auto 4rem;
       max-width: 550px;
 
-      &:before {
-        // content: "";
-        // background-color: var(--color-timeline);
-        // position: absolute;
-        // top: 0;
-        // height: 100%;
-        // transform: translateX(-50%);
-        // width: 4px;
-
-        // @media (max-width: 599px) {
-        //   left: 20px;
-        // }
-        
-        // @media (min-width: 600px) {
-        //   left: 50%;
-        // }
+      @media (max-width: 599px) {
+        padding-right: 1rem;
       }
     }
 
@@ -38,7 +43,7 @@
       background-color: var(--color-timeline);
       position: absolute;
       top: 0;
-      height: 100%;
+      height: 0;
       transform: translateX(-50%);
       width: 4px;
 
@@ -49,12 +54,15 @@
       @media (min-width: 600px) {
         left: 50%;
       }
+
+      .bio-visible & {
+        height: 100%;
+      }
     }
 
     &item {
-      margin-bottom: 4rem;
+      padding-bottom: 4rem;
       display: flex;
-      justify-content: space-between;
       position: relative;
       min-height: 3rem;
 
@@ -62,9 +70,22 @@
         flex-direction: column;
         padding-left: 45px;
       }
-      
-      &.jsDetailToggle {
-        cursor: pointer;
+    }
+
+    &info,
+    &date {
+      .bio-visible & {
+        animation-name: bio1;
+        animation-duration: var(--animation-duration-fadein);
+        animation-fill-mode: forwards;
+      }
+    }
+
+    &point {
+      .bio-visible & {
+        animation-name: bio2;
+        animation-duration: var(--animation-duration-fadein);
+        animation-fill-mode: forwards;
       }
     }
 
@@ -80,6 +101,7 @@
     &date {
       color: var(--color-date);
       line-height: 1.4;
+      margin: 0 0 0.1rem;
       font-size: 0.9rem;
       
       @media (min-width: 600px) {
@@ -99,7 +121,7 @@
 
     &point {
       position: absolute;
-      top: 0;
+      top: 15px;
       width: 30px;
       transform: translateX(-50%);
       height: 30px;
@@ -107,26 +129,30 @@
       background-color: var(--color-point);
       border-radius: 50%;
       border: 8px solid var(--color-point-border);
-
+      
       @media (max-width: 599px) {
         left: 20px;
       }
-
+      
       @media (min-width: 600px) {
         left: 50%;
       }
+      
+      .bio__item--active & {
+        background-color: var(--color-point-active);
 
-      &:after {
-        position: absolute;
-        top: 0;
-        content: "";
-        left: 0;
-        box-sizing: border-box;
-        width: 100%;
-        height: 100%;
-        background-color: var(--color-point);
-        border-radius: 50%;
-        animation: biopulse 2s infinite;
+        &:after {
+          position: absolute;
+          top: 0;
+          content: "";
+          left: 0;
+          box-sizing: border-box;
+          width: 100%;
+          height: 100%;
+          background-color: var(--color-point-active);
+          border-radius: 50%;
+          animation: biopulse var(--animation-duration-pulse) infinite;
+        }
       }
     }
 
@@ -143,32 +169,27 @@
           order: 1;
           padding-right: var(--padding-timeline);
         }
+        
+        .bio__items .bio__item & {
+          text-align: left;
+          order: 1;
+          padding: 0;
+          
+        }
       }
     }
 
     &title {
       font-weight: bold;
       line-height: 1.4;
+      font-size: 1rem;
     }
 
     &company {
-      margin-top: 0.3rem;
+      position: relative;
+      display: inline-block;
       font-size: 0.8em;
       color: var(--color-company);
-    }
-
-    &details {
-      color: var(--color-base);
-      margin-top: 0.8rem;
-      font-size: 0.9em;
-      max-height: 0;
-      overflow: hidden;
-      transition: max-height 0.5s;
-      
-      .bio__item.details-active & {
-        transition: max-height var(--transition-duration-details) ease-in;
-        max-height: 1000px;
-      }
     }
   }
 }

@@ -1,0 +1,51 @@
+.imprint {
+  --background-color: #212121;
+
+  --color-attr: #BD92EA;
+  --color-syntax: #89DDF2;
+  --color-value: #B9E88D;
+  --color-cursor: #FFCB6B;
+
+  --animation-duration-cursor: 1.5s;
+
+  background-color: white;
+  padding: 4em 1rem 0;
+  font-family: var(--font-family-code);
+
+  &__ {
+    &editor {
+      background: var(--background-color);
+      margin: 0 auto;
+      width: 90%;
+      max-width: 900px;
+      border-radius: 15px;
+      box-shadow: 4px 4px 40px 2px rgba(black, 0.5);
+    }
+
+    &headline {
+      color: white;
+      text-align: center;
+      padding-top: 2rem;
+    }
+
+    &code {
+      color: var(--color-syntax);
+      padding: 2rem 0 3rem;
+    }
+
+    &attr {
+      color: var(--color-attr);
+    }
+
+    &value {
+      color: var(--color-value);
+    }
+
+    &cursor {
+      color: var(--color-cursor);
+      animation: cursor var(--animation-duration-cursor) infinite;
+      position: relative;
+      top: 1px;
+    }
+  }
+}

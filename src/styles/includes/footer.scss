@@ -1,0 +1,23 @@
+.footer {
+  --color-linkhover: #49B79C;
+  --background-color: black;
+  --color-text: white;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: var(--background-color);
+  color: var(--color-text);
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+  left: 0;
+  height: var(--height-footer);
+  
+  &__ {
+    &love {
+      font-size: 0.8rem;
+      display: block;
+    }
+  }
+}

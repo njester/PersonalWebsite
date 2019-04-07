@@ -1,0 +1,20 @@
+.hobbies {
+  --transition-duration: 0.4s;
+
+  padding: 4em 1rem 0;
+
+  &__ {
+    &content {
+      transition: transform var(--transition-duration);
+      
+      @media (min-width: 1200px) {
+        transform: translate3d(calc(var(--navigation-width) / 2), 0, 0);
+      }
+    }
+
+    &heading {
+      text-align: center;
+      margin-bottom: 2rem;
+    }
+  }
+}
