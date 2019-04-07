@@ -9,17 +9,17 @@
   --animation-duration-cursor: 1.5s;
 
   background-color: white;
-  padding: 4em 1rem 0;
+  padding: 4em 0.5rem 2rem;
   font-family: var(--font-family-code);
 
   &__ {
     &editor {
       background: var(--background-color);
       margin: 0 auto;
-      width: 90%;
       max-width: 900px;
       border-radius: 15px;
       box-shadow: 4px 4px 40px 2px rgba(black, 0.5);
+      overflow: hidden;
     }
 
     &headline {
@@ -31,10 +31,41 @@
     &code {
       color: var(--color-syntax);
       padding: 2rem 0 3rem;
+
+      @media (max-width: 335px) {
+        transform: translateX(-45px);
+        width: calc(100% + 45px);
+      }
+
+      @media (max-width: 365px) {
+        font-size: 0.8em;
+      }
+
+      @media (max-width: 405px) {
+        font-size: 0.9em;
+      }
+
+      @media (min-width: 336px) and (max-width: 480px) {
+        transform: translateX(-40px);
+        width: calc(100% + 40px);
+      }
+    }
+
+    &whitespace {
+      @media (max-width: 335px) {
+        transform: translateX(-5px);
+      }
+      @media (max-width: 405px) {
+        display: none;
+      }
     }
 
     &attr {
       color: var(--color-attr);
+
+      @media (max-width: 335px) {
+        font-size: 0.9em;
+      }
     }
 
     &value {

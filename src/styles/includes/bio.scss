@@ -18,10 +18,6 @@
     &heading,
     &list {
       transition: transform 0.4s;
-      
-      @media (min-width: 1200px) {
-        transform: translate3d(calc(var(--navigation-width) / 2), 0, 0);
-      }
     }
 
     &heading {

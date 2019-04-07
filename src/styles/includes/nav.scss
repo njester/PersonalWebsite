@@ -9,26 +9,22 @@
   position: fixed;
   top: 0;
   height: 100%;
+  right: 100%;
   width: var(--navigation-width);
   background-color: var(--color-background);
   transition: transform 0.4s;
   z-index: var(--zindex-nav);
-
+  transform: translate3d(0, 0, 0);
+  
   @media (max-width: 360px) {
     max-width: calc(100vw - 70px);
   }
-
-  @media (max-width: 1199px) {
-    transform: translate3d(-100%, 0, 0);
-
-    .nav-open & {
-      transform: translate3d(0, 0, 0);
-    }
+  
+  
+  .nav-open & {
+    transform: translate3d(100%, 0, 0);
   }
 
-  @media (min-width: 1200px) {
-    transform: translate3d(0, 0, 0);
-  }
 
   &__ {
     &thumb img {
@@ -90,22 +86,9 @@
         right: 12px;
       }
 
-      @media (min-width: 600px) and (max-width: 767px) {
-        top: 30px;
-        right: 30px;
-      }
-      
-      @media (max-width: 1199px) {
-        display: block;
-      }
-      
-      @media (min-width: 768px) {
-        top: 40px;
-        right: 40px;
-      }
-
-      @media (min-width: 1200px) {
-        display: none;
+      @media (min-width: 600px) {
+        top: 20px;
+        right: 25px;
       }
 
       .nav-open & {
@@ -122,9 +105,9 @@
       right: 0;
       height: 4px;
       background-color: #131313;
-      transition-property: background;
       transition-duration: 0.3s;
       transition-delay: 0.3s;
+      transition-property: background;
       
       .nav-open & {
         background: none;

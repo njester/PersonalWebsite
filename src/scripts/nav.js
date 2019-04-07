@@ -1,4 +1,5 @@
 window.addEventListener('load', function() {
+  observeScrolling();
   document
     .querySelector('.jsNavToggle')
     .addEventListener('click', toggleNavigation);
@@ -18,6 +19,7 @@ function toggleNavigation() {
 function closeNavigation() {
   let body = document.querySelector('body');
   body.classList.remove('nav-open');
+  window.removeEventListener('scroll', handleScroll, {capture: false});
 }
 
 function navigate() {
@@ -27,4 +29,21 @@ function navigate() {
     window.scrollTo({ top: top, left: 0, behavior: "smooth" });
     closeNavigation();
   }
+}
+
+function observeScrolling() {
+  window.addEventListener('scroll', handleScroll);
+}
+
+function handleScroll(e) {
+  let timeout;
+  window.requestAnimationFrame(function() {
+    const scroll = window.scrollY;
+    timeout = setTimeout(function() {
+      if (Math.abs(scroll - window.scrollY) > 150) {
+        closeNavigation();
+        clearTimeout(timeout);
+      }
+    }, 200);
+  })
 }

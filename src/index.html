@@ -11,7 +11,7 @@
   <meta name="keywords" content="">
 </head>
 
-<body>
+<body class="nav-open">
   <nav class="nav jsNav">
     <div class="nav__thumb">
       <img src="src/images/thumb3.jpg" alt="Manuel">
@@ -19,9 +19,8 @@
     <ul class="nav__items">
       <li class="nav__item"><a data-link=".jsHeader" class="nav__link">Start</a></li>
       <li class="nav__item"><a data-link=".jsBio" class="nav__link">CV</a></li>
-      <li class="nav__item"><a data-link=".jsSkills" class="nav__link">Skills</a></li>
       <li class="nav__item"><a data-link=".jsHobbies" class="nav__link">Hobbies</a></li>
-      <li class="nav__item"><a data-link=".jsMap" class="nav__link">Impressum</a></li>
+      <li class="nav__item"><a data-link=".jsImprint" class="nav__link">Impressum</a></li>
     </ul>
   </nav>
   
@@ -137,105 +136,26 @@
         </div>
       </div>
     </section>
-    <section class="skills jsSkills" id="skills">
-      <div class="skills__content">
-        <h3 class="skills__heading">
-          Skills
-        </h3>
-        <div class="skills__items">
-          <div class="skills__item">
-            <div class="skills__progress skills__progress--nativ">
-              <span class="skills__level">
-                Muttersprache
-              </span>
-            </div>
-            <h5 class="skills__label">Deutsch</h5>
-          </div>
-          <div class="skills__item">
-            <div class="skills__progress skills__progress--negotiation">
-              <span class="skills__level">
-                Verhandlungssicher
-              </span>
-            </div>
-            <h5 class="skills__label">HTML / CSS / JS</h5>
-          </div>
-          <div class="skills__item">
-            <div class="skills__progress skills__progress--mid">
-              <span class="skills__level">
-                Fließend
-              </span>
-            </div>
-            <h5 class="skills__label">Englisch</h5>
-          </div>
-          <div class="skills__item">
-            <div class="skills__progress skills__progress--mid">
-              <span class="skills__level">
-                Fließend
-              </span>
-            </div>
-            <h5 class="skills__label">Java / C#</h5>
-          </div>
-          <div class="skills__item">
-            <div class="skills__progress skills__progress--foundations">
-              <span class="skills__level">
-                Grundkentnisse
-              </span>
-            </div>
-            <h5 class="skills__label">C / Scheme</h5>
-          </div>
-        </div>
-      </div>
-    </section>
     <section class="hobbies jsHobbies" id="hobbies">
       <div class="hobbies__content">
         <h3 class="hobbies__heading">Hobbies</h3>
 
       </div>
     </section>
-    <section class="map jsMap" id="map">
-      <img class="map__bg" src="staticmap.php?center=40.714728,-73.998672&zoom=14&size=865x512&maptype=mapnik"></img>
-      <div class="map__fg">
-        <h3 class="map__head">Impressum</h3>
-        <div class="map__heading">
-          <img src="src/images/thumb3.jpg" alt="" class="map__thumb">
-          <span class="map__cursortext">Kontaktieren Sie mich!</span>
-          <span class="map__cursorindicator">|</span>
-        </div>
-        <div class="map__sections">
-          <div class="map__section">
-            <h4 class="map__headline">Adresse:</h4>
-            <adress class="map__copy">
-              Harald-Hamberg-Str. 6<br />
-              97422 Schweinfurt
-            </adress>
-          </div>
-          <div class="map__spacer"></div>
-          <div class="map__section">
-            <h4 class="map__headline">E-Mail:</h4>
-            <a href="mailto:manuel.koch90@gmail.com" class="map__copy map__copy--hover">manuel.koch90@gmail.com</a>
-          </div>
-          <div class="map__spacer"></div>
-          <div class="map__section">
-            <h4 class="map__headline">Telefon:</h4>
-            <a href="javascript:;" class="map__copy map__copy--hover">+49 151 20614454</a>
-          </div>
-        </div>
-      </div>
-    </section>
-    <section class="imprint">
+    <section class="imprint jsImprint" id="imprint">
       <div class="imprint__editor">
         <h3 class="imprint__headline">Impressum.json</h3>
         <pre class="imprint__code">
-          {
-            "<span class="imprint__attr">Name</span>": "<span class="imprint__value">Manuel Koch</span>",
-            "<span class="imprint__attr">Anschrift</span>": {
-              "<span class="imprint__attr">Straße</span>": "<span class="imprint__value">Harald-Hamberg-Str. 6</span>",
-              "<span class="imprint__attr">PLZ</span>": "<span class="imprint__value">97422</span>",
-              "<span class="imprint__attr">Ort</span>": "<span class="imprint__value">Schweinfurt</span>"
-            },
-            "<span class="imprint__attr">Telefon</span>": "<span class="imprint__value">+49 151 20614454</span>",
-            "<span class="imprint__attr">E-Mail</span>": "<a href="mailto:kontakt@koch-manuel.de" class="imprint__value">kontakt@koch-manuel.de</a>"
-          }<span class="imprint__cursor">|</span>
+      {
+       <span class="imprint__whitespace"> </span>"<span class="imprint__attr">Name</span>": "<span class="imprint__value">Manuel Koch</span>",
+       <span class="imprint__whitespace"> </span>"<span class="imprint__attr">Anschrift</span>": {
+        <span class="imprint__whitespace"> </span><span class="imprint__whitespace"> </span>"<span class="imprint__attr">Straße</span>": "<span class="imprint__value">Harald-Hamberg-Str. 6</span>",
+        <span class="imprint__whitespace"> </span><span class="imprint__whitespace"> </span>"<span class="imprint__attr">PLZ</span>": "<span class="imprint__value">97422</span>",
+        <span class="imprint__whitespace"> </span><span class="imprint__whitespace"> </span>"<span class="imprint__attr">Ort</span>": "<span class="imprint__value">Schweinfurt</span>"
+       <span class="imprint__whitespace"> </span>},
+       <span class="imprint__whitespace"> </span>"<span class="imprint__attr">Telefon</span>": "<span class="imprint__value">+49 151 20614454</span>",
+       <span class="imprint__whitespace"> </span>"<span class="imprint__attr">E-Mail</span>": "<a href="mailto:kontakt@koch-manuel.de" class="imprint__value">kontakt@koch-manuel.de</a>"
+      }<span class="imprint__cursor">|</span>
         </pre>
       </div>
     </section>
