@@ -136,12 +136,55 @@
         </div>
       </div>
     </section>
+    <section class="history">
+      <div class="history__heading">
+        <img src="/src/images/branch.png" alt="">
+        <h3 class="history__headline">Career</h3>
+      </div>
+      <div class="history__content">
+        <canvas id="gitGraph"></canvas>
+        <div class="history__items">
+          <div class="history__item">
+            <div class="history__stamp">09.2012 - 07.2015</div>
+            <div class="history__info">
+              <h5 class="history__title">
+                Ausbildung: Fachinformatiker Anwendungsentwicklung
+              </h5>
+              <span class="history__company">
+                DV-Schule
+              </span>
+            </div>
+          </div>
+          <div class="history__item history__item--branch">
+            <div class="history__stamp">sfd</div>
+            <div>asdfasdf</div>
+          </div>
+          <div class="history__item">
+            <div class="history__stamp">sfd</div>
+            <div>asdfasdf</div>
+          </div>
+          <div class="history__item">
+            <div class="history__stamp">sfd</div>
+            <div>asdfasdf</div>
+          </div>
+          <div class="history__item">
+            <div class="history__stamp">sfd</div>
+            <div>asdfasdf</div>
+          </div>
+          <div class="history__item">
+            <div class="history__stamp">sfd</div>
+            <div>asdfasdf</div>
+          </div>
+        </div>
+      </div>
+    </section>
     <section class="hobbies jsHobbies" id="hobbies">
       <div class="hobbies__content">
         <h3 class="hobbies__heading">Hobbies</h3>
 
       </div>
     </section>
+    
     <section class="imprint jsImprint" id="imprint">
       <div class="imprint__editor">
         <h3 class="imprint__headline">Impressum.json</h3>
@@ -167,4 +210,34 @@
   </footer>
 </body>
 
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gitgraph.js/1.15.2/gitgraph.min.js"></script>
+<script>
+const myTemplateConfig = {
+  colors: ["#008FB5", "#F1C109", "#009900"], // branches colors, 1 per column
+  branch: {
+    lineWidth: 6,
+    spacingX: 30
+  },
+  commit: {
+    spacingY: -100,
+    dot: {
+      size: 10,
+    },
+    message: {
+      display: false,
+    },
+  }
+};
+const myTemplate = new GitGraph.Template(myTemplateConfig);
+
+const gitGraph = new GitGraph( {template: myTemplate} );
+
+  const master = gitGraph.branch().commit();
+  const b1 = master.branch({column: 1}).commit();
+  b1.merge(master);
+  master.commit().commit();
+  const b2 = master.branch({column: 1}).commit();
+  const b3 = master.branch({column: 2}).commit();
+
+</script>
 </html>

@@ -5,11 +5,7 @@
 
   &__ {
     &content {
-      transition: transform var(--transition-duration);
-      
-      @media (min-width: 1200px) {
-        transform: translate3d(calc(var(--navigation-width) / 2), 0, 0);
-      }
+
     }
 
     &heading {

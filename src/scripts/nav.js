@@ -45,5 +45,5 @@ function handleScroll(e) {
         clearTimeout(timeout);
       }
     }, 200);
-  })
+  });
 }

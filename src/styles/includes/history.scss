@@ -1,0 +1,70 @@
+.history {
+  --color-date: rgba(47,47,47,0.5);
+  --color-company: rgba(47,47,47,0.5);
+
+  padding: 4em 1rem 0;
+
+  &__ {
+    &heading {
+      text-align: center;
+      margin-bottom: 2rem;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+
+    &headline {
+      display: inline-block;
+      margin-left: 0.4rem;
+    }
+
+    &content {
+      margin: 0 auto;
+      max-width: 900px;
+      width: 90%;
+      position: relative;
+      display: flex;
+    }
+    
+    &items {
+      position: relative;
+      top: 7px;
+    }
+
+    &item {
+      display: flex;
+      line-height: 1;
+      height: 100px;
+
+      &--branch {
+        margin-top: -1px;
+      }
+    }
+
+    &stamp {
+      width: 140px;
+      margin-right: 0.4rem;
+      color: var(--color-date);
+      line-height: 1.4;
+      font-size: 0.9rem;
+    }
+
+    &info {
+      max-width: 300px;
+    }
+
+    &title {
+      font-weight: bold;
+      line-height: 1.1;
+      font-size: 1rem;
+      margin-bottom: 0.2em;
+    }
+
+    &company {
+      position: relative;
+      display: inline-block;
+      font-size: 0.8em;
+      color: var(--color-company);
+    }
+  }
+}

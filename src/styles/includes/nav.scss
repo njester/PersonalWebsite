@@ -15,6 +15,7 @@
   transition: transform 0.4s;
   z-index: var(--zindex-nav);
   transform: translate3d(0, 0, 0);
+  display: none;
   
   @media (max-width: 360px) {
     max-width: calc(100vw - 70px);
