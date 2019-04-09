@@ -47,8 +47,8 @@
   },
   "dependencies": {
     "@babel/polyfill": "^7.0.0",
-    "gsap": "^2.1.2",
-    "normalize.scss": "^0.1.0",
-    "scrollmagic": "^2.0.6"
+    "css-vars-ponyfill": "^1.17.2",
+    "intersection-observer": "^0.5.1",
+    "normalize.scss": "^0.1.0"
   }
 }

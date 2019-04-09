@@ -1,4 +1,4 @@
-html {
+:root {
   --bp-small-max: 599px;
   --bp-large-min: 600px;
   --bp-nav-offcanvas-max: 1199px;
@@ -11,4 +11,29 @@ html {
   --height-footer: 60px;
 
   --font-family-code: Consolas, 'Courier New', monospace;
+
+  --bio-padding-timeline: 2rem;
+  --bio-animation-duration-fadein: 1s;
+  --bio-animation-duration-pulse: 2s;
+  --bio-color-timeline: #008FB5;
+  --bio-color-date: rgba(47,47,47,0.5);
+  --bio-color-company: rgba(47,47,47,0.5);
+  --bio-color-point-border: #008FB5;
+  --bio-color-point-pulse: #008FB5;
+  --bio-color-point-bg: white;
+  --bio-color-base: #ffffff;
+  
+
+  --footer-color-linkhover: #49B79C;
+  --footer-background-color: black;
+  --footer-color-text: white;
+
+  --imprint-background-color: #212121;
+
+  --imprint-color-attr: #BD92EA;
+  --imprint-color-syntax: #89DDF2;
+  --imprint-color-value: #B9E88D;
+  --imprint-color-cursor: #FFCB6B;
+
+  --imprint-animation-duration-cursor: 1.5s;
 }

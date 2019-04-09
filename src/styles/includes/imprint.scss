@@ -1,15 +1,6 @@
 .imprint {
-  --background-color: #212121;
-
-  --color-attr: #BD92EA;
-  --color-syntax: #89DDF2;
-  --color-value: #B9E88D;
-  --color-cursor: #FFCB6B;
-
-  --animation-duration-cursor: 1.5s;
-
   background-color: white;
-  font-family: var(--font-family-code);
+  font-family: var(--imprint-font-family-code);
   
   @media (max-width: 799px) {
     padding: 2em 0.5rem 2rem;
@@ -20,7 +11,7 @@
 
   &__ {
     &editor {
-      background: var(--background-color);
+      background: var(--imprint-background-color);
       margin: 0 auto;
       max-width: 900px;
       border-radius: 15px;
@@ -35,7 +26,7 @@
     }
 
     &code {
-      color: var(--color-syntax);
+      color: var(--imprint-color-syntax);
       padding: 2rem 0 3rem;
 
       @media (max-width: 335px) {
@@ -67,7 +58,7 @@
     }
 
     &attr {
-      color: var(--color-attr);
+      color: var(--imprint-color-attr);
 
       @media (max-width: 335px) {
         font-size: 0.9em;
@@ -75,12 +66,12 @@
     }
 
     &value {
-      color: var(--color-value);
+      color: var(--imprint-color-value);
     }
 
     &cursor {
-      color: var(--color-cursor);
-      animation: cursor var(--animation-duration-cursor) infinite;
+      color: var(--imprint-color-cursor);
+      animation: cursor var(--imprint-animation-duration-cursor) infinite;
       position: relative;
       top: 1px;
     }

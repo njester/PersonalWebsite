@@ -1,15 +1,4 @@
 .bio {
-  --padding-timeline: 2rem;
-  --animation-duration-fadein: 1s;
-  --animation-duration-pulse: 2s;
-  --color-timeline: #008FB5;
-  --color-date: rgba(47,47,47,0.5);
-  --color-company: rgba(47,47,47,0.5);
-  --color-point-border: #008FB5;
-  --color-point-pulse: #008FB5;
-  --color-point-bg: white;
-  --color-base: #1f1f1f;
-  
   padding-top: 4em;
 
   background-color: #ffffff;
@@ -41,7 +30,7 @@
     }
 
     &line {
-      background-color: var(--color-timeline);
+      background-color: var(--bio-color-timeline);
       position: absolute;
       top: 0;
       height: 0;
@@ -77,7 +66,7 @@
     &date {
       .bio-visible & {
         animation-name: bio1;
-        animation-duration: var(--animation-duration-fadein);
+        animation-duration: var(--bio-animation-duration-fadein);
         animation-fill-mode: forwards;
       }
     }
@@ -85,7 +74,7 @@
     &point {
       .bio-visible & {
         animation-name: bio2;
-        animation-duration: var(--animation-duration-fadein);
+        animation-duration: var(--bio-animation-duration-fadein);
         animation-fill-mode: forwards;
       }
     }
@@ -100,7 +89,7 @@
     }
 
     &date {
-      color: var(--color-date);
+      color: var(--bio-color-date);
       line-height: 1.4;
       margin: 0 0 0.1rem;
       font-size: 0.9rem;
@@ -109,13 +98,13 @@
         .bio__item:nth-of-type(odd) & {
           text-align: right;
           order: 1;
-          padding-right: var(--padding-timeline);
+          padding-right: var(--bio-padding-timeline);
         }
   
         .bio__item:nth-of-type(even) & {
           text-align: left;
           order: 2;
-          padding-left: var(--padding-timeline);
+          padding-left: var(--bio-padding-timeline);
         }
       }
     }
@@ -127,7 +116,7 @@
       transform: translateX(-50%);
       height: 21px;
       box-sizing: border-box;
-      background-color: var(--color-point-border);
+      background-color: var(--bio-color-point-border);
       border-radius: 50%;
       
       @media (max-width: 599px) {
@@ -144,14 +133,14 @@
         left: 50%;
         transform: translate(-50%, -50%);
         content:"";
-        background-color: var(--color-point-bg);
+        background-color: var(--bio-color-point-bg);
         height: 12px;
         width: 12px;
         border-radius: 50%;
         z-index: 1;
       }
       
-      .bio__item--active & {        
+      .bio__item--bio-active & {        
         &:after {
           position: absolute;
           top: 0;
@@ -160,9 +149,9 @@
           box-sizing: border-box;
           width: 100%;
           height: 100%;
-          background-color: var(--color-point-pulse);
+          background-color: var(--bio-color-point-pulse);
           border-radius: 50%;
-          animation: biopulse var(--animation-duration-pulse) infinite;
+          animation: biopulse var(--bio-animation-duration-pulse) infinite;
         }
       }
     }
@@ -172,13 +161,13 @@
         .bio__item:nth-of-type(odd) & {
           text-align: left;
           order: 2;
-          padding-left: var(--padding-timeline);
+          padding-left: var(--bio-padding-timeline);
         }
   
         .bio__item:nth-of-type(even) & {
           text-align: right;
           order: 1;
-          padding-right: var(--padding-timeline);
+          padding-right: var(--bio-padding-timeline);
         }
         
         .bio__items .bio__item & {
@@ -201,7 +190,7 @@
       position: relative;
       display: inline-block;
       font-size: 0.8em;
-      color: var(--color-company);
+      color: var(--bio-color-company);
     }
   }
 }

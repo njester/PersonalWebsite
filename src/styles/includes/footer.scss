@@ -1,18 +1,14 @@
 .footer {
-  --color-linkhover: #49B79C;
-  --background-color: black;
-  --color-text: white;
-
   display: flex;
   align-items: center;
   justify-content: center;
-  background-color: var(--background-color);
-  color: var(--color-text);
+  background-color: var(--footer-background-color);
+  color: var(--footer-color-text);
   position: fixed;
   bottom: 0;
   width: 100%;
   left: 0;
-  height: var(--height-footer);
+  height: var(--footer-height-footer);
   
   &__ {
     &love {
