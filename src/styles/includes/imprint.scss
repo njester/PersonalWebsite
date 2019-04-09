@@ -9,8 +9,14 @@
   --animation-duration-cursor: 1.5s;
 
   background-color: white;
-  padding: 4em 0.5rem 2rem;
   font-family: var(--font-family-code);
+  
+  @media (max-width: 799px) {
+    padding: 2em 0.5rem 2rem;
+  }
+  @media (min-width: 800px) {
+    padding: 4em 0.5rem 2rem;
+  }
 
   &__ {
     &editor {
