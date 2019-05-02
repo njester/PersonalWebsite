@@ -26,6 +26,3 @@ if (window.NodeList && !NodeList.prototype.forEach) {
 }
 
 import '../styles/index.scss';
-
-// import './nav.js';
-import './bio.js';
